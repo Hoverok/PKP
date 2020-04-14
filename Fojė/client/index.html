@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Žaidimo fojė</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1>Žaidimo fojė</h1>
+    <div class="lobby-state">
+      <p>Fojė prienamumas:</p>
+      <input type="radio" id="no-password" name="state" value="no-password">
+      <label for="no-password">Laisvai prieinamas</label><br><br>
+      <input type="radio" id="password" name="state" value="password">
+      <label for="password">Prieinamas su slaptažodžiu</label><br>
+      <input id="pass" autocomplete="off" title="pass"/>
+      <input type="submit" value="Išsaugoti">
+    </div>
+    <div class="player-number">
+      <br><br><p>Žaidėjų kiekis:</p>
+      <input type="radio" id="p2" name="playercount" value="p2">
+      <label for="p2">2</label>
+      <input type="radio" id="p3" name="playercount" value="p3">
+      <label for="p3">3</label>
+      <input type="radio" id="p4" name="playercount" value="p4">
+      <label for="p4">4</label>
+      <input type="radio" id="p5" name="playercount" value="p5">
+      <label for="p5">5</label>
+    </div> 
+    <div class="name-invitation">
+      <br><br>Kviesti žaidėją:
+      <input id="invite-by-name" autocomplete="off" title="invite-by-name"/>
+      <input type="submit" value="Kviesti">
+    </div> 
+    <div class="chatbox-wrapper">
+      <ul id="events"></ul>
+      <div class="controls">
+        <div class="chat-wrapper">
+          <form id="chat-form">
+            <input id="chat" autocomplete="off" title="chat"/>
+            <!--<button id="say">Say</button>-->
+          </form>
+        </div>
+        <!--<div class="button-wrapper">
+          <button id="rock" class="turn">Rock</button>
+          <button id="paper" class="turn">Paper</button>
+          <button id="scissors" class="turn">Scissors</button>
+        </div>-->
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/client.js"></script>
+    <div class ="lobby-state">
+
+    </div>
+  </body> 
+</html>
