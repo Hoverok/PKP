@@ -20,14 +20,6 @@ const onFormSubmitted = (e) => {
   sock.emit('message', text);
 };
 
-const addButtonListeners = () => {
-  ['rock', 'paper', 'scissors'].forEach((id) => {
-    const button = document.getElementById(id);
-    button.addEventListener('click', () => {
-      sock.emit('turn', id);
-    });
-  });
-};
 
 const sock = io();
 sock.on('message', writeEvent);

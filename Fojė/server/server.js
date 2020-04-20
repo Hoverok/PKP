@@ -19,16 +19,9 @@ let waitingPlayer = null;
 
 io.on('connection', (sock) => {
 
- /* if (waitingPlayer) {
-    new RpsGame(waitingPlayer, sock);
-    waitingPlayer = null;
-  } else {
-    waitingPlayer = sock;
-    waitingPlayer.emit('message', 'Waiting for an opponent');
-  }*/
 
   sock.on('message', (text) => {
-    io.emit('message', text); //io sends to EVERYONE CONNECTED TO THE server
+    io.emit('message', text);
   });
 });
 

@@ -12,7 +12,7 @@
     "Game",
     "Socket.IO"
   ],
-  "author": "Juriy Bura <juriy.bura@gmail.com>",
+  "author": "Pavel Čikiliov",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
