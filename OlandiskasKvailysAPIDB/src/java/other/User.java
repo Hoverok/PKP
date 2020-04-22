@@ -11,18 +11,20 @@ public class User implements Serializable {
     int userToken;
     int gamesTotal;
     int gamesWon;
+    String accStatus;
     String accName;
     String EMail;
     String password;
 
-    public User(int ID, int userToken, int gamesTotal, int gamesWon, String accName, String EMail, String Password) {
+    public User(int ID, int userToken, int gamesTotal, int gamesWon, String accStatus, String accName, String EMail, String password) {
         this.ID = ID;
         this.userToken = userToken;
         this.gamesTotal = gamesTotal;
         this.gamesWon = gamesWon;
+        this.accStatus = accStatus;
         this.accName = accName;
         this.EMail = EMail;
-        this.password = Password;
+        this.password = password;
     }
 
     public int getID() {
